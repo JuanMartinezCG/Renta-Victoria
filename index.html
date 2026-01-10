@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentar Victoria | Transporte Especial y Turismo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="header-container">
+
+            <!-- Branding -->
+            <div class="brand">
+                <img src="img/logo.svg" alt="Logo Rentar Victoria">
+
+                <div class="brand-text">
+                    <h1>RENTAR VICTORIA</h1>
+                    <p>Transporte de Pasajeros Empresarial</p>
+                    <p>Turismo, Carga y Encomiendas</p>
+                </div>
+            </div>
+
+            <!-- Navegación -->
+            <nav class="nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#flota">Flota</a></li>
+                    <li><a href="#cotizar">Cotizar</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+
+            <h2>
+                SERVICIOS DE TRANSPORTE ESPECIAL<br>
+                Y TURISMO EN EL MAGDALENA
+            </h2>
+
+            <p>
+                Somos Rentar Victoria, una empresa dedicada al transporte y turismo en el área del Magdalena,
+                con más de 10 años de experiencia. Priorizamos la calidad y comodidad en cada viaje.
+            </p>
+
+            <div class="hero-stats">
+
+                <div class="stat">
+                    <span>+10</span>
+                    <p>Años de experiencia</p>
+                </div>
+
+                <div class="stat">
+                    <span>1000+</span>
+                    <p>Clientes satisfechos</p>
+                </div>
+
+                <div class="stat">
+                    <span>24/7</span>
+                    <p>Disponibilidad</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SERVICIOS ================= -->
+    <section id="servicios" class="servicios">
+        <h3>NUESTROS SERVICIOS</h3>
+
+        <div class="servicios-grid">
+
+            <article class="servicio-card">
+                <h4>Transporte Turístico</h4>
+                <p>
+                    Tours personalizados por Santa Marta y el Magdalena,
+                    con guías expertos y vehículos confortables.
+                </p>
+            </article>
+
+            <article class="servicio-card">
+                <h4>Transporte Empresarial</h4>
+                <p>
+                    Servicio ejecutivo para eventos corporativos,
+                    traslados de personal y reuniones empresariales.
+                </p>
+            </article>
+
+            <article class="servicio-card">
+                <h4>Transporte Especial</h4>
+                <p>
+                    Servicios personalizados para bodas, eventos,
+                    celebraciones y ocasiones especiales.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ================= FLOTA ================= -->
+    <section id="flota" class="flota">
+        <h3>NUESTRA FLOTA</h3>
+
+        <div class="flota-grid">
+
+            <article class="vehiculo-card">
+                <img src="img/van.svg" alt="Van">
+                <h4>Camioneta VAN</h4>
+                <p>Capacidad: 7 a 10 pasajeros</p>
+                <ul>
+                    <li>Aire acondicionado</li>
+                    <li>Asientos reclinables</li>
+                    <li>Conductor profesional</li>
+                    <li>Seguro incluido</li>
+                </ul>
+            </article>
+
+            <article class="vehiculo-card">
+                <img src="img/suv.svg" alt="SUV">
+                <h4>Camioneta SUV</h4>
+                <p>Capacidad: 5 a 7 pasajeros</p>
+                <ul>
+                    <li>Comodidad premium</li>
+                    <li>Aire acondicionado</li>
+                    <li>Conductor profesional</li>
+                    <li>Seguro incluido</li>
+                </ul>
+            </article>
+
+            <article class="vehiculo-card">
+                <img src="img/microbus.svg" alt="Microbus">
+                <h4>Microbús</h4>
+                <p>Capacidad: 15 a 20 pasajeros</p>
+                <ul>
+                    <li>Ideal para grupos grandes</li>
+                    <li>Aire acondicionado</li>
+                    <li>Conductor profesional</li>
+                    <li>Seguro incluido</li>
+                </ul>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ================= FORMULARIO ================= -->
+    <section id="cotizar" class="cotizar">
+        <h3>COTIZAR</h3>
+        <p>Completa el formulario y te contactaremos vía WhatsApp</p>
+
+        <form id="formCotizacion">
+
+            <div class="form-group">
+                <label>Nombre completo *</label>
+                <input type="text" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label>Teléfono *</label>
+                <input type="tel" name="telefono" required>
+            </div>
+
+            <div class="form-group">
+                <label>Ciudad *</label>
+                <input type="text" name="ciudad" required>
+            </div>
+
+            <div class="form-group">
+                <label>Tipo de servicio *</label>
+                <select name="servicio" required>
+                    <option value="">Selecciona</option>
+                    <option value="Turístico">Turístico</option>
+                    <option value="Empresarial">Empresarial</option>
+                    <option value="Especial">Transporte Especial</option>
+                    <option value="Aeropuerto">Traslado Aeropuerto</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Fecha *</label>
+                <input type="date" name="fecha" required>
+            </div>
+
+            <div class="form-group">
+                <label>Número de pasajeros *</label>
+                <input type="number" name="pasajeros" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label>Mensaje adicional</label>
+                <textarea name="mensaje" rows="4"></textarea>
+            </div>
+
+            <button type="submit">
+                Cotizar vía WhatsApp
+            </button>
+
+        </form>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <h4>RENTAR VICTORIA</h4>
+        <p>Transporte Especial y Turismo en el Magdalena</p>
+        <small>© 2026 Rentar Victoria. Todos los derechos reservados.</small>
+    </footer>
+
+    <script src="funcion.js"></script>
+
+</body>
+</html>
