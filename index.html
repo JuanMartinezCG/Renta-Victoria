@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+    <div id="inicio"></div>
     <!-- ================= HEADER ================= -->
     <header>
         <div class="header-container">
@@ -31,9 +31,8 @@
 
         </div>
     </header>
-
     <!-- ================= HERO ================= -->
-    <section id="inicio" class="hero">
+    <section id="in" class="hero">
         <div class="hero-content">
             <h2>
                 SERVICIOS DE TRANSPORTE ESPECIAL<br>
@@ -71,6 +70,7 @@
             <img src="img/lugares/imagen 5.webp" alt="">
             <img src="img/lugares/imagen 6.jpg" alt="">
         </div>
+        <div id ="servicios"></div>
     </section>
 
     <!-- ================= SERVICIOS ================= -->
@@ -102,7 +102,7 @@
                     celebraciones y ocasiones especiales.
                 </p>
             </article>
-
+            <div id="flota"></div>
         </div>
     </section>
 
@@ -149,6 +149,7 @@
             </article>
 
         </div>
+        <div id="cotizar"></div>
     </section>
 
 <!-- ================= FORMULARIO ================= -->
@@ -158,13 +159,13 @@
 
     <form id="formCotizacion">
 
-        <!-- Nombre completo (ocupa toda la línea) -->
+        <!-- Nombre completo -->
         <div class="form-group">
             <label>Nombre completo</label>
             <input type="text" name="nombre" required>
         </div>
 
-        <!-- Cédula y Teléfono en la misma línea -->
+        <!-- Cédula y Teléfono -->
         <div class="form-row">
             <div class="form-group">
                 <label>Cédula</label>
@@ -190,7 +191,7 @@
             </div>
         </div>
 
-        <!-- Tipo de vehículo (ocupa toda la línea) -->
+        <!-- Tipo de vehículo  -->
         <div class="form-group">
             <label>Tipo de Vehículo</label>
             <select name="servicio" required>
@@ -201,7 +202,7 @@
             </select>
         </div>
 
-        <!-- Fecha y Número de pasajeros en la misma línea -->
+        <!-- Fecha y Número de pasajeros  -->
         <div class="form-row">
             <div class="form-group">
                 <label>Fecha</label>
@@ -214,10 +215,10 @@
             </div>
         </div>
 
-        <!-- Mensaje adicional (ocupa toda la línea) -->
+        <!-- Mensaje adicional  -->
         <div class="form-group">
             <label>Mensaje adicional</label>
-            <textarea name="mensaje" rows="4" placeholder="Informe si requiere algún servicio especial"></textarea>
+            <textarea name="mensaje" rows="4" placeholder="Informe si requiere algún servicio especial para algun pasajero"></textarea>
         </div>
 
         <button type="submit">
