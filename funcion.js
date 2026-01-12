@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Número de WhatsApp de la empresa (cambia este número)
-        const numeroWhatsApp = '3005022406'; // CAMBIAR POR TU NÚMERO
+        const numeroWhatsApp = '3242418942'; // CAMBIAR POR TU NÚMERO
         
         // Crear URL de WhatsApp
         const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoWhatsApp}`;
