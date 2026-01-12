@@ -455,6 +455,7 @@ form {
     max-width: 800px;
     margin: auto;
     background: var(--color-light);
+    border: 2px solid var(--color-primary);
     padding: 3rem;
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.1);
