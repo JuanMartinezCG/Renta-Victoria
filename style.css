@@ -251,6 +251,26 @@ header {
     color: var(--color-gray-light);
 }
 
+.hero-cta {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: var(--color-dark);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(254, 204, 9, 0.4);
+}
+
+
 /* =========================
    SECCIONES GENERALES
 ========================= */
@@ -533,30 +553,249 @@ button:active {
 /* =========================
    FOOTER
 ========================= */
-footer {
-    background: var(--color-dark);
+.footer {
+    background: linear-gradient(180deg, var(--color-dark) 0%, var(--color-darker) 100%);
     color: var(--color-gray-light);
-    text-align: center;
-    padding: 3rem 1rem;
-    border-top: 3px solid var(--color-primary);
+    padding: 5rem 1.5rem 2rem;
+    border-top: 4px solid var(--color-primary);
+    position: relative;
 }
 
-footer h4 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-light);
-    font-weight: 700;
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--color-primary) 50%, 
+        transparent 100%);
 }
 
-footer p {
-    margin-bottom: 1rem;
+.footer-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Columna de marca */
+.footer-col-brand .footer-description {
     color: var(--color-gray);
+    line-height: 1.7;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
 }
 
-footer small {
+/* Títulos de columnas */
+.footer-col h4 {
+    color: var(--color-light);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--color-secondary);
+}
+
+/* Lista de contacto */
+.footer-contact {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--color-gray);
+    line-height: 1.6;
+}
+
+.footer-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--color-primary);
+    margin-top: 2px;
+}
+
+.footer-contact a {
+    color: var(--color-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: var(--color-secondary);
+}
+
+/* Enlaces rápidos */
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--color-gray);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
+
+.footer-links a::before {
+    content: '→';
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: var(--color-secondary);
+}
+
+.footer-links a:hover {
+    color: var(--color-light);
+    padding-left: 20px;
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    left: 0;
+}
+
+/* Redes sociales */
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-gray);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-light);
+    transform: translateX(5px);
+}
+
+.social-link:hover svg {
+    transform: scale(1.1);
+}
+
+/* Colores específicos para redes sociales */
+.social-link:nth-child(1):hover { color: #1877f2; } /* Facebook */
+.social-link:nth-child(2):hover { color: #e4405f; } /* Instagram */
+.social-link:nth-child(3):hover { color: #25d366; } /* WhatsApp */
+
+/* Footer bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 2rem;
+}
+
+.footer-bottom-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-bottom small {
     color: var(--color-gray);
     font-size: 0.85rem;
 }
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.footer-legal a {
+    color: var(--color-gray);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--color-light);
+}
+
+.footer-legal span {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links a:hover {
+        padding-left: 0;
+    }
+
+    .footer-links a::before {
+        display: none;
+    }
+}
+
 
 /* =========================
    RESPONSIVE
